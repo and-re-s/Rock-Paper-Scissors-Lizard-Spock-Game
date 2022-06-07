@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  width: 500px;
+  height: 545px;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0 10px 20px -5px rgba(100, 100, 100, 0.8);
+}
+
+.header {
+  background: dodgerblue;
+  padding: 5px 10px 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px 7px 0px 0px;
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
+}
+
+.player-container {
+  margin: 10px 50px;
+}
+
+.computer-container {
+  margin: 20px 50px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  text-align: center;
+  margin: 0px 0px 10px;
+}
+
+h3 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 20px 0px;
+}
+
+#player .options,
+#player .choice,
+#player .score {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+#computer .options,
+#computer .choice,
+#computer .score {
+  color: red;
+}
+
+.selected {
+  color: black;
+}
+
+.reset-icon {
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 235px;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-text {
+  font-size: 34px;
+  margin: unset;
+  margin-top: 10px;
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .game-container {
+    width: 95%;
+    height: 580px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .player-container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .computer-container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .reset-icon {
+    margin-left: 45%;
+  }
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .game-container {
+    height: 550px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .player-container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .computer-container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .reset-icon {
+    margin-top: 5px;
+    margin-left: 45%;
+  }
+
+  .result-container {
+    margin: 0 20px;
+  }
+}
