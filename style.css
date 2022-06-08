@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: whitesmoke;
+  background-color: #e3d8c4;
   font-family: "Kdam Thmor Pro", sans-serif;
   display: flex;
   justify-content: center;
@@ -16,14 +16,14 @@ body {
 
 .game-container {
   width: 500px;
-  height: 545px;
+  height: 555px;
   background-color: white;
   border-radius: 7px;
   box-shadow: 0 10px 20px -5px rgba(100, 100, 100, 0.8);
 }
 
 .header {
-  background: dodgerblue;
+  background: #2f6690;
   padding: 5px 10px 5px 10px;
   display: flex;
   justify-content: center;
@@ -64,30 +64,98 @@ h3 {
 #player .options,
 #player .choice,
 #player .score {
-  color: dodgerblue;
+  color: #2f6690;
   cursor: pointer;
 }
 
 #computer .options,
 #computer .choice,
 #computer .score {
-  color: red;
+  color: #a8201a;
 }
 
 .selected {
   color: black;
 }
 
+.game-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 50px 0px 50px;
+}
+
+.fa-question {
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .reset-icon {
   font-size: 30px;
   cursor: pointer;
-  margin-left: 235px;
+}
+
+.game-rules-container {
+  display: flex;
+  position: absolute;
+  width: 300px;
+  height: 420px;
+  background-color: white;
+  left: 50%;
+  margin-left: -10%;
+  top: 50%;
+  margin-top: -11%;
+  border-radius: 7px;
+  box-shadow: 0 10px 20px -5px rgba(100, 100, 100, 0.8);
+}
+
+.game-rules-header {
+  background: #2f6690;
+  padding: 5px 5px 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.game-rules-header h2 {
+  color: white;
+  text-align: center;
+  margin: 0px;
+  font-weight: 300;
+}
+
+.game-rules {
+  display: grid;
+  margin: 0px 15px 15px 15px;
+}
+
+.computer {
+  color: #a8201a;
+}
+
+.player {
+  color: #2f6690;
+}
+
+.rule {
+  margin: 10px;
+  display: flex;
+  float: left;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .result-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hide-rules {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
 }
 
 .result-text {
@@ -115,6 +183,20 @@ h3 {
   .computer-container {
     margin-left: 15px;
     margin-right: 15px;
+  }
+
+  .game-rules-container {
+    display: flex;
+    position: absolute;
+    width: 300px;
+    height: 420px;
+    background-color: white;
+    left: 20%;
+    margin-left: -10%;
+    top: 35%;
+    margin-top: -11%;
+    border-radius: 7px;
+    box-shadow: 0 10px 20px -5px rgba(100, 100, 100, 0.8);
   }
 
   .reset-icon {
@@ -145,6 +227,20 @@ h3 {
   .reset-icon {
     margin-top: 5px;
     margin-left: 45%;
+  }
+
+  .game-rules-container {
+    display: flex;
+    position: absolute;
+    width: 300px;
+    height: 420px;
+    background-color: white;
+    left: 20%;
+    margin-left: -10%;
+    top: 25%;
+    margin-top: -11%;
+    border-radius: 7px;
+    box-shadow: 0 10px 20px -5px rgba(100, 100, 100, 0.8);
   }
 
   .result-container {

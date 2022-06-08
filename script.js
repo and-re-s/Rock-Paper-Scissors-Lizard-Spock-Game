@@ -18,6 +18,7 @@ const computerScissors = document.querySelector("#computerScissors");
 const computerLizard = document.querySelector("#computerLizard");
 const computerSpock = document.querySelector("#computerSpock");
 
+const infoDiv = document.querySelector(".game-rules-container");
 const allGameIcons = document.querySelectorAll(".fa-regular");
 
 const choices = {
@@ -33,8 +34,15 @@ let computerScoreNumber = 0;
 
 let computerChoice = "";
 
-// Reset all selected icons
+// Call functions to process turn
+function checkResult(playerChoice) {
+  resetSelected();
+  computerRandomChoice();
+  displayComputerChoice();
+  updateScore(playerChoice);
+}
 
+// Reset all selected icons
 function resetSelected() {
   allGameIcons.forEach((icon) => {
     icon.classList.remove("selected");
@@ -43,18 +51,36 @@ function resetSelected() {
   removeConfetti();
 }
 
-function resetAll() {
-  playerScoreNumber = 0;
-  playerScoreEl.textContent = "Score: 0";
-  playerChoiceEl.textContent = "Choice: ";
-  computerScoreNumber = 0;
-  computerScoreEl.textContent = "Score: 0";
-  computerChoiceEl.textContent = "Choice: ";
-  resultText.textContent = "";
-  resetSelected();
+// Passing value, selected by player
+function select(playerChoice) {
+  checkResult(playerChoice);
+  switch (playerChoice) {
+    case "rock":
+      playerRock.classList.add("selected");
+      playerChoiceEl.textContent = "Choice: Rock";
+      break;
+    case "paper":
+      playerPaper.classList.add("selected");
+      playerChoiceEl.textContent = "Choice: Paper";
+      break;
+    case "scissors":
+      playerScissors.classList.add("selected");
+      playerChoiceEl.textContent = "Choice: Scissors";
+      break;
+    case "lizard":
+      playerLizard.classList.add("selected");
+      playerChoiceEl.textContent = "Choice: Lizard";
+      break;
+    case "spock":
+      playerSpock.classList.add("selected");
+      playerChoiceEl.textContent = "Choice: Spock";
+      break;
+    default:
+      break;
+  }
 }
-window.resetAll = resetAll;
 
+// Computer selecting figure
 function computerRandomChoice() {
   const computerRandomChoice = Math.random();
   if (computerRandomChoice < 0.2) {
@@ -98,7 +124,7 @@ function displayComputerChoice() {
   }
 }
 
-// Checking results, increasing scores on screen
+// Checking results, increasing scores on screen, drop confetti
 function updateScore(playerChoice) {
   if (playerChoice === computerChoice) {
     resultText.textContent = "It's a tie.";
@@ -117,43 +143,24 @@ function updateScore(playerChoice) {
   }
 }
 
-// Call functions to process turn
-function checkResult(playerChoice) {
-  resetSelected();
-  computerRandomChoice();
-  displayComputerChoice();
-  updateScore(playerChoice);
-}
-
-// Passing value, selected by player
-function select(playerChoice) {
-  checkResult(playerChoice);
-  switch (playerChoice) {
-    case "rock":
-      playerRock.classList.add("selected");
-      playerChoiceEl.textContent = "Choice: Rock";
-      break;
-    case "paper":
-      playerPaper.classList.add("selected");
-      playerChoiceEl.textContent = "Choice: Paper";
-      break;
-    case "scissors":
-      playerScissors.classList.add("selected");
-      playerChoiceEl.textContent = "Choice: Scissors";
-      break;
-    case "lizard":
-      playerLizard.classList.add("selected");
-      playerChoiceEl.textContent = "Choice: Lizard";
-      break;
-    case "spock":
-      playerSpock.classList.add("selected");
-      playerChoiceEl.textContent = "Choice: Spock";
-      break;
-    default:
-      break;
+function showRules() {
+  console.log("toggle");
+  if (infoDiv.style.display === "none") {
+    infoDiv.style.display = "block";
+  } else {
+    infoDiv.style.display = "none";
   }
 }
 
-window.select = select;
+function resetAll() {
+  playerScoreNumber = 0;
+  playerScoreEl.textContent = "Score: 0";
+  playerChoiceEl.textContent = "Choice: ";
+  computerScoreNumber = 0;
+  computerScoreEl.textContent = "Score: 0";
+  computerChoiceEl.textContent = "Choice: ";
+  resultText.textContent = "";
+  resetSelected();
+}
 
 resetAll();

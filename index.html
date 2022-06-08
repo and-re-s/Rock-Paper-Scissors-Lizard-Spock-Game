@@ -98,18 +98,92 @@
           ></i>
         </div>
       </div>
-      <i
-        class="fas fa-sync-alt reset-icon"
-        title="Reset"
-        onclick="resetAll()"
-      ></i>
+      <div class="game-rules-container" style="display: none">
+        <div class="game-rules-header">
+          <h2>Game Rules</h2>
+        </div>
+        <div class="game-rules">
+          <span class="rule"
+            ><i
+              class="fa-regular fa-hand-back-fist fa-3x player"
+              title="Rock"
+            ></i>
+            beats
+            <i
+              class="fa-regular fa-hand-scissors fa-3x computer"
+              title="Scissors"
+            ></i>
+            <i
+              class="fa-regular fa-hand-lizard fa-3x computer"
+              title="Lizard"
+            ></i
+          ></span>
+          <span class="rule"
+            ><i class="fa-regular fa-hand fa-3x player" title="Paper"></i> beats
+            <i
+              class="fa-regular fa-hand-back-fist fa-3x computer"
+              title="Rock"
+            ></i
+            ><i
+              class="fa-regular fa-hand-spock fa-3x computer"
+              title="Spock"
+            ></i
+          ></span>
+          <span class="rule"
+            ><i
+              class="fa-regular fa-hand-scissors fa-3x player"
+              title="Scissors"
+            ></i>
+            beats
+            <i class="fa-regular fa-hand fa-3x computer" title="Paper"></i>
+            <i
+              class="fa-regular fa-hand-lizard fa-3x computer"
+              title="Lizard"
+            ></i>
+          </span>
+          <span class="rule">
+            <i
+              class="fa-regular fa-hand-lizard fa-3x player"
+              title="Lizard"
+            ></i>
+            beats
+            <i class="fa-regular fa-hand fa-3x computer" title="Paper"></i>
+            <i class="fa-regular fa-hand-spock fa-3x computer" title="Spock">
+            </i
+          ></span>
+          <span class="rule">
+            <i class="fa-regular fa-hand-spock fa-3x player" title="Spock"></i>
+            beats
+            <i
+              class="fa-regular fa-hand-back-fist fa-3x computer"
+              title="Rock"
+            ></i>
+            <i
+              class="fa-regular fa-hand-scissors fa-3x computer"
+              title="Scissors"
+            ></i></span
+          ><span class="hide-rules" onclick="showRules()">Hide rules</span>
+        </div>
+      </div>
+      <div class="game-menu">
+        <i
+          class="fa-solid fa-question"
+          title="How to play"
+          onclick="showRules()"
+        ></i>
+        <i
+          class="fas fa-sync-alt reset-icon"
+          title="Reset"
+          onclick="resetAll()"
+        ></i>
+      </div>
       <!-- Results Text -->
       <div class="result-container">
         <h3 class="result-text" id="resultText"></h3>
       </div>
     </div>
     <!-- Script -->
-    <script src="script.js" type="module"></script>
+    <script src="script.js"></script>
     <!-- <script src="confetti.js" type="module"></script> -->
   </body>
 </html>
