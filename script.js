@@ -165,5 +165,6 @@ function resetAll() {
 
 window.reset = resetAll;
 window.select = select;
+window.showRules = showRules;
 
 resetAll();
