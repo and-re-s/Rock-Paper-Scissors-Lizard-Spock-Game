@@ -163,7 +163,7 @@ function resetAll() {
   resetSelected();
 }
 
-window.reset = resetAll;
+window.resetAll = resetAll;
 window.select = select;
 window.showRules = showRules;
 
