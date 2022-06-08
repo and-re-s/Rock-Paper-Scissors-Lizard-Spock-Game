@@ -163,4 +163,7 @@ function resetAll() {
   resetSelected();
 }
 
+window.reset = resetAll;
+window.select = select;
+
 resetAll();
