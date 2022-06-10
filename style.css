@@ -74,8 +74,14 @@ h3 {
   color: #a8201a;
 }
 
-.selected {
-  color: black;
+.computer-selected {
+  filter: invert(0%) sepia(0%) saturate(2%) hue-rotate(204deg) brightness(52%)
+    contrast(100%);
+}
+
+.player-selected {
+  filter: invert(0%) sepia(96%) saturate(0%) hue-rotate(182deg) brightness(33%)
+    contrast(102%);
 }
 
 .game-menu {
@@ -84,13 +90,7 @@ h3 {
   margin: 30px 50px 0px 50px;
 }
 
-.fa-question {
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.reset-icon {
-  font-size: 30px;
+.support-icons {
   cursor: pointer;
 }
 
@@ -98,7 +98,7 @@ h3 {
   display: flex;
   position: absolute;
   width: 300px;
-  height: 420px;
+  height: 425px;
   background-color: white;
   left: 50%;
   margin-left: -10%;
@@ -129,14 +129,6 @@ h3 {
   margin: 0px 15px 15px 15px;
 }
 
-.computer {
-  color: #a8201a;
-}
-
-.player {
-  color: #2f6690;
-}
-
 .rule {
   margin: 10px;
   display: flex;
@@ -156,12 +148,12 @@ h3 {
   justify-content: center;
   align-items: center;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .result-text {
   font-size: 34px;
-  margin: unset;
-  margin-top: 10px;
+  margin: 10px 0px 5px 0px;
 }
 
 /* Media Query: Large Smartphone (Vertical) */
@@ -185,11 +177,17 @@ h3 {
     margin-right: 15px;
   }
 
+  .game-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px 0px 15px;
+  }
+
   .game-rules-container {
     display: flex;
     position: absolute;
     width: 300px;
-    height: 420px;
+    height: 425px;
     background-color: white;
     left: 20%;
     margin-left: -10%;
@@ -198,15 +196,12 @@ h3 {
     border-radius: 7px;
     box-shadow: 0 10px 20px -5px rgba(100, 100, 100, 0.8);
   }
-
-  .reset-icon {
-    margin-left: 45%;
-  }
 }
 
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
   .game-container {
+    width: 95%;
     height: 550px;
   }
 
@@ -224,16 +219,17 @@ h3 {
     margin-right: 15px;
   }
 
-  .reset-icon {
-    margin-top: 5px;
-    margin-left: 45%;
+  .game-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px 0px 15px;
   }
 
   .game-rules-container {
     display: flex;
     position: absolute;
     width: 300px;
-    height: 420px;
+    height: 425px;
     background-color: white;
     left: 20%;
     margin-left: -10%;

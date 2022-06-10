@@ -1,4 +1,4 @@
-import { startConfetti, stopConfetti, removeConfetti } from "./confetti.js";
+// import { startConfetti, stopConfetti, removeConfetti } from "./confetti.js";
 
 const playerScoreEl = document.querySelector("#playerScore");
 const playerChoiceEl = document.querySelector("#playerChoice");
@@ -19,7 +19,8 @@ const computerLizard = document.querySelector("#computerLizard");
 const computerSpock = document.querySelector("#computerSpock");
 
 const infoDiv = document.querySelector(".game-rules-container");
-const allGameIcons = document.querySelectorAll(".fa-regular");
+const allPlayerIcons = document.querySelectorAll(".player, .icon");
+const allComputerIcons = document.querySelectorAll(".computer, .icon");
 
 const choices = {
   rock: { name: "Rock", defeats: ["scissors", "lizard"] },
@@ -44,8 +45,11 @@ function checkResult(playerChoice) {
 
 // Reset all selected icons
 function resetSelected() {
-  allGameIcons.forEach((icon) => {
-    icon.classList.remove("selected");
+  allPlayerIcons.forEach((icon) => {
+    icon.classList.remove("player-selected");
+  });
+  allComputerIcons.forEach((icon) => {
+    icon.classList.remove("computer-selected");
   });
   stopConfetti();
   removeConfetti();
@@ -56,23 +60,23 @@ function select(playerChoice) {
   checkResult(playerChoice);
   switch (playerChoice) {
     case "rock":
-      playerRock.classList.add("selected");
+      playerRock.classList.add("player-selected");
       playerChoiceEl.textContent = "Choice: Rock";
       break;
     case "paper":
-      playerPaper.classList.add("selected");
+      playerPaper.classList.add("player-selected");
       playerChoiceEl.textContent = "Choice: Paper";
       break;
     case "scissors":
-      playerScissors.classList.add("selected");
+      playerScissors.classList.add("player-selected");
       playerChoiceEl.textContent = "Choice: Scissors";
       break;
     case "lizard":
-      playerLizard.classList.add("selected");
+      playerLizard.classList.add("player-selected");
       playerChoiceEl.textContent = "Choice: Lizard";
       break;
     case "spock":
-      playerSpock.classList.add("selected");
+      playerSpock.classList.add("player-selected");
       playerChoiceEl.textContent = "Choice: Spock";
       break;
     default:
@@ -100,23 +104,23 @@ function computerRandomChoice() {
 function displayComputerChoice() {
   switch (computerChoice) {
     case "rock":
-      computerRock.classList.add("selected");
+      computerRock.classList.add("computer-selected");
       computerChoiceEl.textContent = "Choice: Rock";
       break;
     case "paper":
-      computerPaper.classList.add("selected");
+      computerPaper.classList.add("computer-selected");
       computerChoiceEl.textContent = "Choice: Paper";
       break;
     case "scissors":
-      computerScissors.classList.add("selected");
+      computerScissors.classList.add("computer-selected");
       computerChoiceEl.textContent = "Choice: Scissors";
       break;
     case "lizard":
-      computerLizard.classList.add("selected");
+      computerLizard.classList.add("computer-selected");
       computerChoiceEl.textContent = "Choice: Lizard";
       break;
     case "spock":
-      computerSpock.classList.add("selected");
+      computerSpock.classList.add("computer-selected");
       computerChoiceEl.textContent = "Choice: Spock";
       break;
     default:

@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script
-      src="https://kit.fontawesome.com/d6cbfc7ee0.js"
-      crossorigin="anonymous"
-    ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spock Rock Game</title>
@@ -27,36 +23,52 @@
           </h3>
         </h2>
         <div class="options" id="player">
-          <i
-            class="fa-regular fa-hand-back-fist fa-3x"
+          <img
+            src="./assets/player/player-rock.svg"
+            width="50"
+            height="50"
+            class="player icon"
             title="Rock"
             id="playerRock"
             onclick="select('rock')"
-          ></i>
-          <i
-            class="fa-regular fa-hand fa-3x"
+          />
+
+          <img
+            src="./assets/player/player-paper.svg"
+            width="50"
+            height="50"
+            class="player icon"
             title="Paper"
             id="playerPaper"
             onclick="select('paper')"
-          ></i>
-          <i
-            class="fa-regular fa-hand-scissors fa-3x"
+          />
+          <img
+            src="./assets/player/player-scissor.svg"
+            width="50"
+            height="50"
+            class="player icon"
             title="Scissors"
             id="playerScissors"
             onclick="select('scissors')"
-          ></i>
-          <i
-            class="fa-regular fa-hand-lizard fa-3x"
+          />
+          <img
+            src="./assets/player/player-lizard.svg"
+            width="50"
+            height="50"
+            class="player icon"
             title="Lizard"
             id="playerLizard"
             onclick="select('lizard')"
-          ></i>
-          <i
-            class="fa-regular fa-hand-spock fa-3x"
+          />
+          <img
+            src="./assets/player/player-spock.svg"
+            width="50"
+            height="50"
+            class="player icon"
             title="Spock"
             id="playerSpock"
             onclick="select('spock')"
-          ></i>
+          />
         </div>
       </div>
       <!-- Player Container -->
@@ -71,28 +83,43 @@
           </h3>
         </h2>
         <div class="options" id="computer">
-          <i
-            class="fa-regular fa-hand-back-fist fa-3x"
+          <img
+          src="./assets/computer/computer-rock.svg"
+          width="50"
+          height="50"
+            class="computer icon"
             title="Rock"
             id="computerRock"
-          ></i>
-          <i
-            class="fa-regular fa-hand fa-3x"
+          >
+          <img
+          src="./assets/computer/computer-paper.svg"
+          width="50"
+          height="50"
+            class="computer icon"
             title="Paper"
             id="computerPaper"
-          ></i>
-          <i
-            class="fa-regular fa-hand-scissors fa-3x"
+          >
+          <img
+          src="./assets/computer/computer-scissor.svg"
+          width="50"
+          height="50"
+            class="computer icon"
             title="Scissors"
             id="computerScissors"
-          ></i>
-          <i
-            class="fa-regular fa-hand-lizard fa-3x"
+          >
+          <img
+          src="./assets/computer/computer-lizard.svg"
+          width="50"
+          height="50"
+            class="computer icon"
             title="Lizard"
             id="computerLizard"
-          ></i>
-          <i
-            class="fa-regular fa-hand-spock fa-3x"
+          >
+          <img
+          src="./assets/computer/computer-spock.svg"
+          width="50"
+          height="50"
+            class="computer icon"
             title="Spock"
             id="computerSpock"
           ></i>
@@ -104,78 +131,123 @@
         </div>
         <div class="game-rules">
           <span class="rule"
-            ><i
-              class="fa-regular fa-hand-back-fist fa-3x player"
+            ><img
+            src="./assets/player/player-rock.svg"
+            width="50"
+            height="50"
+              class="player"
               title="Rock"
-            ></i>
+            >
             beats
-            <i
-              class="fa-regular fa-hand-scissors fa-3x computer"
+            <img
+            src="./assets/computer/computer-scissor.svg"
+            width="50"
+            height="50"
+              class="computer"
               title="Scissors"
-            ></i>
-            <i
-              class="fa-regular fa-hand-lizard fa-3x computer"
+            >
+            <img
+            src="./assets/computer/computer-lizard.svg"
+            width="50"
+            height="50"
+              class="computer"
               title="Lizard"
-            ></i
-          ></span>
+            ></span>
           <span class="rule"
-            ><i class="fa-regular fa-hand fa-3x player" title="Paper"></i> beats
-            <i
-              class="fa-regular fa-hand-back-fist fa-3x computer"
+            ><img
+            src="./assets/player/player-paper.svg"
+            width="50"
+            height="50" class="player" title="Paper"> beats
+            <img
+            src="./assets/computer/computer-rock.svg"
+            width="50"
+            height="50"
+              class="computer"
               title="Rock"
-            ></i
-            ><i
-              class="fa-regular fa-hand-spock fa-3x computer"
+            ><img
+            src="./assets/computer/computer-spock.svg"
+            width="50"
+            height="50"
+              class="computer"
               title="Spock"
-            ></i
-          ></span>
+            ></span>
           <span class="rule"
-            ><i
-              class="fa-regular fa-hand-scissors fa-3x player"
+            ><img
+            src="./assets/player/player-scissor.svg"
+            width="50"
+            height="50"
+              class="player"
               title="Scissors"
-            ></i>
+            >
             beats
-            <i class="fa-regular fa-hand fa-3x computer" title="Paper"></i>
-            <i
-              class="fa-regular fa-hand-lizard fa-3x computer"
+            <img
+            src="./assets/computer/computer-paper.svg"
+            width="50"
+            height="50" class="fa-regular fa-hand fa-3x computer" title="Paper">
+            <img
+            src="./assets/computer/computer-lizard.svg"
+            width="50"
+            height="50"
+              class="computer"
               title="Lizard"
-            ></i>
+            >
           </span>
           <span class="rule">
-            <i
-              class="fa-regular fa-hand-lizard fa-3x player"
+            <img
+            src="./assets/player/player-lizard.svg"
+            width="50"
+            height="50"
+              class="player"
               title="Lizard"
-            ></i>
+            >
             beats
-            <i class="fa-regular fa-hand fa-3x computer" title="Paper"></i>
-            <i class="fa-regular fa-hand-spock fa-3x computer" title="Spock">
-            </i
-          ></span>
+            <img
+            src="./assets/computer/computer-paper.svg"
+            width="50"
+            height="50" class="computer" title="Paper">
+            <img
+            src="./assets/computer/computer-spock.svg"
+            width="50"
+            height="50" class="computer" title="Spock">
+            </span>
           <span class="rule">
-            <i class="fa-regular fa-hand-spock fa-3x player" title="Spock"></i>
+            <img
+            src="./assets/player/player-spock.svg"
+            width="50"
+            height="50" class="player" title="Spock">
             beats
-            <i
-              class="fa-regular fa-hand-back-fist fa-3x computer"
+            <img
+            src="./assets/computer/computer-rock.svg"
+            width="50"
+            height="50"
+              class="computer"
               title="Rock"
-            ></i>
-            <i
-              class="fa-regular fa-hand-scissors fa-3x computer"
+            >
+            <img
+            src="./assets/computer/computer-scissor.svg"
+            width="50"
+            height="50"
+              class="computer"
               title="Scissors"
-            ></i></span
+            ></span
           ><span class="hide-rules" onclick="showRules()">Hide rules</span>
         </div>
       </div>
       <div class="game-menu">
-        <i
-          class="fa-solid fa-question"
+        <img src="./assets/question.svg"
+        width="35"
+            height="35"
+          class="support-icons"
           title="How to play"
           onclick="showRules()"
-        ></i>
-        <i
-          class="fas fa-sync-alt reset-icon"
+        >
+        <img src="./assets/reload.svg"
+        width="35"
+            height="35"
+          class="support-icons"
           title="Reset"
           onclick="resetAll()"
-        ></i>
+        >
       </div>
       <!-- Results Text -->
       <div class="result-container">
