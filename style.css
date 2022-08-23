@@ -160,7 +160,7 @@ h3 {
 @media screen and (max-width: 600px) {
   .game-container {
     width: 95%;
-    height: 525px;
+    height: 555px;
   }
 
   h1 {
@@ -202,7 +202,7 @@ h3 {
 @media screen and (max-width: 376px) {
   .game-container {
     width: 95%;
-    height: 525px;
+    height: 555px;
   }
 
   h1 {
