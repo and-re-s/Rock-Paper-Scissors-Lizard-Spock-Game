@@ -11,4 +11,4 @@ It's a fun twist on the classic game of Rock Paper Scissors, and adds an extra l
 🖖 Spock beats 👊 Rock and ✂️ Scissors  
 
 <a href="https://and-re-s.github.io/Rock-Paper-Scissors-Lizard-Spock-Game/">Play game</a>  
-Please note, that if you use Disconnect or another ad/tracker-blocking extensions in-game pictures may not be loaded. In this case you can try to use Incognito mode in Google Chrome.
+Please note, that if you use Disconnect or another ad/tracker-blocking extension in-game pictures may not be loaded. In this case, you can try to use Incognito mode in Google Chrome.
